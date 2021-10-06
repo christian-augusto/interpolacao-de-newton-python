@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  interpolacao-de-newton-python:
+    container_name: interpolacao-de-newton-python
+    build: .
+    image: interpolacao-de-newton-python:latest
+    command: /bin/bash command.sh
+    volumes:
+      - ./src:/interpolacao-de-newton-python/src
