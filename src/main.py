@@ -1,3 +1,6 @@
+from interpolacao_newton import InterpolacaoNewton
+
+
 def main():
     pontos = [
         {
@@ -13,6 +16,8 @@ def main():
             "y": 8
         }
     ]
+
+    InterpolacaoNewton(pontos).calc()
 
 
 main()
