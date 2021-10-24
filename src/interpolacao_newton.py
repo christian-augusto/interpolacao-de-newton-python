@@ -10,18 +10,18 @@ class InterpolacaoNewton:
         self.deltas_por_niveis = []
 
         for nivel in range(1, len(self.pontos)):
-            values = []
+            valores = []
 
-            indices_deltas = nivel - 2
-
-            calc_len = None
+            tamanho_calc = None
+            indices_deltas = None
 
             if nivel == 1:
-                calc_len = len(self.pontos) - 1
+                tamanho_calc = len(self.pontos) - 1
             else:
-                calc_len = len(self.deltas_por_niveis[indices_deltas]) - 1
+                indices_deltas = nivel - 2
+                tamanho_calc = len(self.deltas_por_niveis[indices_deltas]) - 1
 
-            for j in range(0, calc_len):
+            for j in range(0, tamanho_calc):
                 delta_1 = None
                 delta_2 = None
 
@@ -35,11 +35,11 @@ class InterpolacaoNewton:
                 x_1 = self.pontos[nivel + j]["x"]
                 x_2 = self.pontos[0 + j]["x"]
 
-                values.append((delta_1 - delta_2) / (x_1 - x_2))
+                valores.append((delta_1 - delta_2) / (x_1 - x_2))
 
             nivel += 1
 
-            self.deltas_por_niveis.append(values)
+            self.deltas_por_niveis.append(valores)
 
     def deltas_finais(self):
         self.deltas = []
