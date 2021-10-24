@@ -6,7 +6,7 @@ class InterpolacaoNewton:
 
         self.pontos = pontos
 
-    def calc_deltas(self):
+    def calcular_deltas(self):
         self.deltas_por_niveis = []
 
         for nivel in range(1, len(self.pontos)):
@@ -41,7 +41,7 @@ class InterpolacaoNewton:
 
             self.deltas_por_niveis.append(values)
 
-    def final_deltas(self):
+    def deltas_finais(self):
         self.deltas = []
 
         self.deltas.append(self.pontos[0]["y"])
@@ -49,7 +49,7 @@ class InterpolacaoNewton:
         for deltas_por_nivel in self.deltas_por_niveis:
             self.deltas.append(deltas_por_nivel[0])
 
-    def calc_y(self, x):
+    def calcular_y(self, x):
         y = self.deltas[0]
 
         for i in range(1, len(self.deltas)):
@@ -62,8 +62,8 @@ class InterpolacaoNewton:
 
         return y
 
-    def calc(self, x):
-        self.calc_deltas()
-        self.final_deltas()
+    def calcular(self, x):
+        self.calcular_deltas()
+        self.deltas_finais()
 
-        return self.calc_y(x)
+        return self.calcular_y(x)
