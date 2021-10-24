@@ -1,9 +1,9 @@
 from interpolacao_newton import InterpolacaoNewton
 
 
-def main():
+def testes():
     # Prova
-    """
+
     pontos = [
         {
             "x": 3,
@@ -16,8 +16,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(3.7)) # R: 1.3
-    """
+    print(interpolacao_newton_1.calcular(3.7))  # R: 1.3
 
     """
     pontos = [
@@ -36,7 +35,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(3.7)) # R: aprox 1.09
+    print(interpolacao_newton_1.calcular(3.7)) # R: aprox 1.09
     """
 
     """
@@ -56,7 +55,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(3)) # R: 1
+    print(interpolacao_newton_1.calcular(3)) # R: 1
     """
 
     """
@@ -76,7 +75,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(5)) # R: 63
+    print(interpolacao_newton_1.calcular(5)) # R: 63
     """
 
     # Lista
@@ -93,7 +92,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(3.7)) # R: 120
+    print(interpolacao_newton_1.calcular(3.7)) # R: 120
     """
 
     """
@@ -113,7 +112,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(3.7)) # R: 118,635
+    print(interpolacao_newton_1.calcular(3.7)) # R: 118,635
     """
 
     # Outros
@@ -134,7 +133,7 @@ def main():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(6))
+    print(interpolacao_newton_1.calcular(6))
     """
 
     """
@@ -163,11 +162,15 @@ def main():
 
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calc(0.5)) R: aprox 1.64776
+    print(interpolacao_newton_1.calcular(0.5)) R: aprox 1.64776
     """
 
     print(interpolacao_newton_1.deltas_por_niveis)
     print(interpolacao_newton_1.deltas)
+
+
+def main():
+    testes()
 
 
 main()
