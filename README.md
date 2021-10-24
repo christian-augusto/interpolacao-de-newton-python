@@ -17,3 +17,10 @@ autopep8 -iv your_script.py # replace content
 ```
 https://www.youtube.com/watch?v=vKYwxkEyqAo&ab_channel=Bistrom%C3%A1tica
 ```
+
+## Como executar o código
+```
+bash shell-scripts/deploy.sh && bash shell-scripts/get-into-container.sh && bash shell-scripts/get-into-container.sh
+cd src
+python main.py
+```
