@@ -7,6 +7,14 @@ class InterpolacaoNewton:
         self.pontos = pontos
 
     def calcular_deltas(self):
+        """
+            Calcula os deltas por nível, começando por:
+                (y(i + 1) - yi) / (x(i + 1) - xi)
+
+            Seguindo com:
+                (delta(i + 1) - delta(i)) / (x(nivel + i) - x(0 + i))
+        """
+
         self.deltas_por_niveis = []
 
         for nivel in range(1, len(self.pontos)):
@@ -42,6 +50,11 @@ class InterpolacaoNewton:
             self.deltas_por_niveis.append(valores)
 
     def deltas_finais(self):
+        """
+            Escolhe o primeiro y e os primeiros deltas de cada nível para
+            montar o array de deltas que será usado na multiplicação
+        """
+
         self.deltas = []
 
         self.deltas.append(self.pontos[0]["y"])
@@ -50,6 +63,12 @@ class InterpolacaoNewton:
             self.deltas.append(deltas_por_nivel[0])
 
     def calcular_y(self, x):
+        """
+            Realiza as multiplicações do método de newton:
+
+            delta(0) + (delta(i)*(x - x(0))* ... (x - xi))
+        """
+
         y = self.deltas[0]
 
         for i in range(1, len(self.deltas)):
