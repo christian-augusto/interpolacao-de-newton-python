@@ -116,7 +116,7 @@ def testes():
     """
 
     # Outros
-    """
+
     pontos = [
         {
             "x": -2,
@@ -133,8 +133,8 @@ def testes():
     ]
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calcular(6))
-    """
+    print(interpolacao_newton_1.calcular(6)) # R: 15
+
 
     """
     pontos = [
@@ -162,7 +162,7 @@ def testes():
 
     interpolacao_newton_1 = InterpolacaoNewton(pontos)
 
-    print(interpolacao_newton_1.calcular(0.5)) R: aprox 1.64776
+    print(interpolacao_newton_1.calcular(0.5)) # R: aprox 1.64776
     """
 
     print(interpolacao_newton_1.deltas_por_niveis)
